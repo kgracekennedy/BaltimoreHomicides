@@ -1,0 +1,29 @@
+library(httr)#
+url="https://api.github.com/users/jtleek/repos"#
+#
+myapp=oauth_app("Github",#
+                key="eafb99771bbd27696303",#
+                secret="811e8caa4b1d3e21fbb69a38eef7dbe94b95657a"#
+                )#
+sig=sign_oauth1.0(myapp,#
+                  token="eafb99771bbd27696303",#
+                  token_secret="811e8caa4b1d3e21fbb69a38eef7dbe94b95657a"#
+                  )
+homeTL=GET("https://api.github.com/users/jtleek/repos",sig)
+head(homeTL)
+library(httr)#
+install.packages("httpuv")#
+library(httpuv)
+oauth_endpoints("github")
+myapp <- oauth_app("github", "eafb99771bbd27696303",#
+                   #secret="811e8caa4b1d3e21fbb69a38eef7dbe94b95657a"#
+                   )
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+myapp <- oauth_app("github", "eafb99771bbd27696303",#
+                   secret="811e8caa4b1d3e21fbb69a38eef7dbe94b95657a"#
+                   )
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+oauth_endpoints("github")
+myapp <- oauth_app("github", "eafb99771bbd27696303"#
+                   )
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
